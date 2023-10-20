@@ -26,7 +26,7 @@ This solution takes alot of inspiration from video games - particularly RPG's. M
 
 We want to implement the same sort of functionality in our software. Questlines are an easy way to keep track of your progress and game-ify tasks, allowing for user satisfaction and more importantly reducing the overwhelming aspect of choosing what to work on.
 
-Our solution is three parts: the Quest Toolbar, Quest View, and Current Task View. The Quest Toolbar is used to view the current questline and view progress, and the quest view will allow for the user to view all tasks in the line. The Current Task View would be an indicator of the current task to work on, so the user can quickly get to work without having to decide for themsevles. This would be on top of the current graph, and clicking on this would show the Quest Toolbar:
+Our solution is two parts: the Quest Toolbar and the Current Task View. The Quest Toolbar is used to view the current questline and view progress, and the quest view will allow for the user to view all tasks in the line. The Current Task View would be an indicator of the current task to work on, so the user can quickly get to work without having to decide for themsevles. This would be on top of the current graph, and clicking on this would show the Quest Toolbar:
 
 ![Questline Breadboard](./breadboard.png)
 
@@ -44,12 +44,12 @@ This toolbar would be accessible to the user upon them interacting with the curr
 
 ### Quest View
 
-This view provides a more detailed view for the current quest, providing all tasks in the questline. This view is different than the quest toolbar as a user may want to browse through the quest to see whats coming up next.
+This view was originally to provide a more detailed view for the current quest, providing all tasks in the questline. This view is different than the quest toolbar as a user may want to browse through the quest to see whats coming up next.
 
-![Quest View](./questview.png)
+[Old quest view drawing](./questview.png)
 
 #### Quest View Rabbit Hole
 
-One option I explored was to highlight every node in a quest when a quest was selected. This would get rid of quest view entirely. However, the implementation would be difficult, and would take alot of refactoring of the current codebase to implement properly. It would also conflict with another feature of our software - Subgraphs. In short, subgraphs are a secondary graph linked to a node in order to reduce clutter by seperating large dependency trees into its own graph that is still linked to a node. If we were to highlight nodes in the UI, how would we properly show subgraphs along with the parent nodes? The solution would take too much time to develop, and implementation isn't feasable. A list of tasks is more than enough to convey what we want while also being clear to the user.
+One option I explored was to highlight every node in a quest when a quest was selected. This would get rid of quest view entirely. However, the implementation would be difficult, and would take alot of refactoring of the current codebase to implement properly. It would also conflict with another feature of our software - Subgraphs. In short, subgraphs are a secondary graph linked to a node in order to reduce clutter by separating large dependency trees into its own graph that is still linked to a node. If we were to highlight nodes in the UI, how would we properly show subgraphs along with the parent nodes? The solution would take too much time to develop, and implementation isn't feasible. A list of tasks is more than enough to convey what we want while also being clear to the user.
 
-
+Then we realized that the quest view itself was a rabbit hole. Just the current task view and the quest toolbar are enough for users to enjoy this feature. Adding another screen is redundant and may lead to more and more duplicate views of the same data being added. Therefore, we will mark quest view as a no-go. We will also mark entering/expanding/analyzing the insides of subgraphs from this feature as a no-go and just treat them as entire nodes for the percentage calculation.
