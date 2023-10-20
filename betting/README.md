@@ -1,3 +1,18 @@
+# **Deliverable 2**
+
+# Winning Pitch
+
+The winning pitch is the Questline feature!
+
+The details of the pitch can be found [here.](https://github.com/Daanish-Khan/seg4105_project/tree/main/pitches/questline)
+
+# Updates to Winning Pitch
+
+- UI Overlay will be moved to top left instead of it living in the bottom left.
+- Quest View will be scrapped as it's not needed, as the user only needs to know the current task and next task (which is covered in the quest toolbar).
+- Instead of grouping quests by children relation, we group tasks into a questline by using the "parent" node as the root and any children can be shared between quests.
+- Instead of searching for new tasks to work on via "depth-first" search, we will use node typings to find "ready" nodes and choose based on whether or not they exist in the current quest.
+
 # Discussion
 
 ## Questline
@@ -23,7 +38,7 @@
 
 - An explanation of the questline system was asked for. Daanish provided a drawing shown below, with each circle being designated as a quest. The goal node is special, and every branch not related to each other is a questline.
 
-![Questline Partition Example](./questpartition.png)
+<img src="questpartitions.png" alt="Quest Partitions" width=900/>
 
 - It was mentioned that implementation might be difficult if we have to detect which trees are seperate. A new algorithm would have to be developed and that would take a significant amount of time.
 	- An alternative solution was suggested, where each primary node coming off of the goal node is considered the "parent" to a questline. Any children related to seperate questlines are shared and are processed seperately based on which quest is chosen.
