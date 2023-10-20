@@ -70,3 +70,66 @@
 
 - Concludes that the right people are available.
 
+## Scanning
+
+This feature allows users to scan Mikado Graphs on paper and import them into our software using image & text recognition.
+
+### Does the problem matter?
+
+- Important for our client to convert all his paper graphs to our software.
+	- His graphs are huge, therefore would be tedious to import manually.
+
+- However, if it doesn't work, it might cause alot of customer support headaches.
+	- Nodes not properly importing/text not readable/edges not correctly connecting, etc
+
+- It doesnt matter to those who are just starting out with the Mikado Method, as they won't have any paper graphs to import.
+	- Just scanning isnt the whole process, you'd also need to move some nodes around to organize, so some manual intervention is required anyways
+
+- Conclusion: The problem doesn't really matter for the client, as he can just import it manually, even if it'll take some time. New users wont even use this feature if they are new to the Mikado Method, which is likely as this methodology is niche.
+
+### Is the appetite right?
+
+- Image detection is really finicky to get right
+	- One member's co-op term dealt with OCR, and it took quite a while to get to a barely working prototype.
+	- Need to take into account different cameras, camera glare, image quality, handwriting quality, etc
+		- Too many factors to take into account that will eat up alot of development time
+
+- Can have a default setting and have the user tweak, but that needs a comprehensive UI to be implemented for customization
+
+- Would this improve new user experience?
+	- Like previously discussed, new users won't be familiar with the Mikado Method and people who want to import would use the feature only once.
+		- Target users would be people who 1. use the mikado method and 2. draw the graphs on paper.
+			- Unlikely as those who are familiar with the method would just use some other electronic platform to manually draw their graphs
+
+- Could we do this in 2 weeks?
+	- No, as OCR is too much of a risk and too finicky to get right.
+
+- Conclusion: Appetite is too big and there are way too many rabbit holes to get a proper implementation. Can be circumvented entirely by just recreating the graph manually
+
+### Is the solution attractive?
+
+- We can afford adding a camera button to the home page for importing, as there is alot of space free. We can also hide it in the user profile hamburger menu.
+
+- Comparison of importing manually and automatically
+	- Admittedly, recreating large graphs manually will take alot of time. However, we provide tools to make the process easier (e.g. double click to quick add nodes, dragging two nodes together to connect them)
+		- Working on this feature would marginally reduce the time it takes to import due to potential bugs arising in the OCR process
+
+- Solution is **not** attractive.
+
+### Is it the right time?
+
+- This is a new major feature, and we don't have anymore polishing to do. 
+	- Therefore, it would be the right time to implement this feature.
+
+### Are the right people available?
+
+- One of the team members has experience with OCR and image recognition.
+	- Member said that it took a long time to get a prototype and it was a while ago, so their skills may have degraded over time
+
+- Fixing unexpected issues might cause alot of scope creep due to unfamiliarity of software tools needed to implement the feature
+
+- Although we have the developers available, they do not have the expertise to be able to efficiently implement this feature.
+
+- We are not certain if we have the right people available for this task.
+
+
