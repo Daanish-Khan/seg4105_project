@@ -15,7 +15,7 @@ The details of the pitch can be found [here.](https://github.com/Daanish-Khan/se
 
 # Discussion
 
-## Questline
+## [Questline](https://github.com/Daanish-Khan/seg4105_project/tree/main/pitches/questline)
 
 - Questline is a solution to user "choice exhaustion" in larger graphs. Alot of "ready" tasks in a graph can overwhelm the user when they try and pick a task to work on, especially when other tasks rely on completion.
 	- The software will pick for you, and provide a gamification of the system in the form of quests. Each quest will be a seperate branch of the graph, allowing the user to systematically work up towards the goal without having to decide what to work on.
@@ -85,7 +85,7 @@ The details of the pitch can be found [here.](https://github.com/Daanish-Khan/se
 
 - Concludes that the right people are available.
 
-## Scanning
+## [Scanning](https://github.com/Daanish-Khan/seg4105_project/tree/main/pitches/scanning)
 
 This feature allows users to scan Mikado Graphs on paper and import them into our software using image & text recognition.
 
