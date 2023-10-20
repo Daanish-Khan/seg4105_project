@@ -4,44 +4,47 @@
 
 The winning pitch is the Questline feature!
 
-The details of the pitch can be found [here.](https://github.com/Daanish-Khan/seg4105_project/tree/main/pitches/questline)
+The updated details of the pitch can be found [here](../pitches/questline).
 
 # Updates to Winning Pitch
 
 - UI Overlay will be moved to top left instead of it living in the bottom left.
 - Quest View will be scrapped as it's not needed, as the user only needs to know the current task and next task (which is covered in the quest toolbar).
 - Instead of grouping quests by children relation, we group tasks into a questline by using the "parent" node as the root and any children can be shared between quests.
-- Instead of searching for new tasks to work on via "depth-first" search, we will use node typings to find "ready" nodes and choose based on whether or not they exist in the current quest.
+- Instead of searching for new tasks to work on via "depth-first" search, we will use node typings to find any "ready" node in the current quest.
+- Subgraphs are treated as one node when calculating percentages to avoid having to load all the subgraphs again
 
 # Discussion
 
 ## [Questline](https://github.com/Daanish-Khan/seg4105_project/tree/main/pitches/questline)
 
 - Questline is a solution to user "choice exhaustion" in larger graphs. Alot of "ready" tasks in a graph can overwhelm the user when they try and pick a task to work on, especially when other tasks rely on completion.
-	- The software will pick for you, and provide a gamification of the system in the form of quests. Each quest will be a seperate branch of the graph, allowing the user to systematically work up towards the goal without having to decide what to work on.
+	- The software will pick for you, and provide a gamification of the system in the form of quests. Each quest will be a separate branch of the graph, allowing the user to systematically work up towards the goal without having to decide what to work on.
 
 ### Does the problem matter? 
 
-- Large graphs in the Mikado Method can lead to clutter and be disorganized. Without some sort of guided task tracker for the user, the UI will become overwhelmind and give the user "choice exhaustion"
+- Large graphs in the Mikado Method can lead to clutter and be disorganized. Without some sort of guided task tracker for the user, the UI will become overwhelming and give the user "choice exhaustion"
 	- It was brought up to the client and he liked the idea, as he had dealt with large graphs before (on paper)
 
-- Multiple customers will use the feature as each graph will eventually grow in size as a project progresses or new requirements are added. We will advertise this feature in the software, and since we aim to make it intuitive as possible, we beleive that most people will use this feature
+- Multiple customers will use the feature as each graph will eventually grow in size as a project progresses or new requirements are added. We will advertise this feature in the software, and since we aim to make it intuitive as possible, we believe that most people will use this feature
 	- Except when working on small graphs, then the feature is not needed.
 		- People will not use it initially, but will eventually see the need for it.
 
+- Conclusion: The problem does matter to most customers.
+
 ### Is the appetite right?
 
-- Depending on some features for the questline system, 6 weeks may not be feasable. We needed to ask ourselves a couple questions regarding the questline system.
+- Depending on some features for the questline system, 6 weeks may not be feasible. We needed to ask ourselves a couple questions regarding the questline system.
 
 - Should the questline look into subgraphs?
-	- Looking into subgraphs would require alot of database changes. It would also significantly slow down performance, as there is a possbility of the quest being infinitely large due to subgraphs not having a depth limit. It would also be too cluttered to defeat the purpose of quests if the quest itself is very large.
+	- Looking into subgraphs would require alot of database changes. It would also significantly slow down performance, as there is a possibility of the quest being infinitely large due to subgraphs not having a depth limit. It would also be too cluttered to defeat the purpose of quests if the quest itself is very large.
 
 - An explanation of the questline system was asked for. Daanish provided a drawing shown below, with each circle being designated as a quest. The goal node is special, and every branch not related to each other is a questline.
 
 <img src="questpartitions.png" alt="Quest Partitions" width=900/>
 
-- It was mentioned that implementation might be difficult if we have to detect which trees are seperate. A new algorithm would have to be developed and that would take a significant amount of time.
-	- An alternative solution was suggested, where each primary node coming off of the goal node is considered the "parent" to a questline. Any children related to seperate questlines are shared and are processed seperately based on which quest is chosen.
+- It was mentioned that implementation might be difficult if we have to detect which trees are separate. A new algorithm would have to be developed and that would take a significant amount of time.
+	- An alternative solution was suggested, where each primary node coming off of the goal node is considered the "parent" to a questline. Any children related to separate questlines are shared and are processed separately based on which quest is chosen.
 		- This solution was chosen as it would be simpler to implement and we already have some of the business implemented.
 
 - How do we order tasks?
@@ -52,13 +55,13 @@ The details of the pitch can be found [here.](https://github.com/Daanish-Khan/se
 
 - What UI are we implementing?
 	- A overlay and a toolbar/modal to display the current task and the toolbar to switch quests.
-	- Syncrhonization issues were brought up where the graph can change if a new task is added
+	- Synchronization issues were brought up where the graph can change if a new task is added
 		- Solution: use the graph as the source of truth and rerender on any changes.
 
 - Are we going to draw the questline/display it?
 	- No, we are just going to display the current task on the graph itself.
 
-- Conclusions: From the discussion above, we have decided the appetite is right with the constraints and solutions we applied.
+- Concludes that from the discussion above, we have decided the appetite is right with the constraints and solutions we applied.
 
 ### Is the solution attractive?
 
@@ -97,8 +100,8 @@ This feature allows users to scan Mikado Graphs on paper and import them into ou
 - However, if it doesn't work, it might cause alot of customer support headaches.
 	- Nodes not properly importing/text not readable/edges not correctly connecting, etc
 
-- It doesnt matter to those who are just starting out with the Mikado Method, as they won't have any paper graphs to import.
-	- Just scanning isnt the whole process, you'd also need to move some nodes around to organize, so some manual intervention is required anyways
+- It doesn't matter to those who are just starting out with the Mikado Method, as they won't have any paper graphs to import.
+	- Just scanning isn't the whole process, you'd also need to move some nodes around to organize, so some manual intervention is required anyways
 
 - Conclusion: The problem doesn't really matter for the client, as he can just import it manually, even if it'll take some time. New users wont even use this feature if they are new to the Mikado Method, which is likely as this methodology is niche.
 
