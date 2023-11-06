@@ -1,4 +1,4 @@
-## Stand up Nodes
+## Stand up Notes
 Started @ 10:00 am, ended @ 10:15 am
 In attendance: Daniel, Daanish
 
