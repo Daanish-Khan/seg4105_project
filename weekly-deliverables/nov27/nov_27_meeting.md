@@ -18,7 +18,7 @@ In attendance: Daniel, Daanish
 			- Functionality was stubbed and then implemented in past week
 			- Need to do integration testing
 	- Next steps
-		- Integration testing, show feature to client and deliver
+		- Integration testing, show feature to client, fix issues and deliver
 
 - Blockers:
 	- None at the moment
