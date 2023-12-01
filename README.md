@@ -12,5 +12,4 @@ The Mikado Machine is a React webapp aimed towards software developers and/or pr
 ## Links
 - [Source code](https://github.com/SEG491X-W2023-T42/mikado-machine)
 - [Project tasks](https://github.com/SEG491X-W2023-T42/mikado-machine/issues)
-- Meeting minutes for this course are in the `/meeting-minutes` directory. Capstone meeting minutes are [here](https://github.com/SEG491X-W2023-T42/mikado-machine/tree/main/docs/09-meeting-minutes).
-- Hill charts are in the `/hill-charts` directory.
+- Project deliverables for this course are in the `/weekly-deliverables` directory. Capstone meeting minutes are [here](https://github.com/SEG491X-W2023-T42/mikado-machine/tree/main/docs/09-meeting-minutes).
