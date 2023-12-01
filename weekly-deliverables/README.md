@@ -7,8 +7,8 @@
 
 |Date|Write-Up|
 |---|---|
-|October 30|[link](weekly-deliverables\oct30\README.md)|
-|November 6|[link](weekly-deliverables\nov6\README.md)|
-|November 13|[link](weekly-deliverables\nov13\README.md)|
-|November 20|[link](weekly-deliverables\nov20\README.md)|
-|November 27|[link](weekly-deliverables\nov27\README.md)|
+|October 30|[link](oct30\README.md)|
+|November 6|[link](nov6\README.md)|
+|November 13|[link](nov13\README.md)|
+|November 20|[link](nov20\README.md)|
+|November 27|[link](nov27\README.md)|
