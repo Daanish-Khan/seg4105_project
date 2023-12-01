@@ -16,11 +16,13 @@ In attendance: Daniel, Daanish
 		- React component has been completed and stubbed
 			- Functionality has been implemented in the same week
 		- Need to do integration testing still
-	
-![Questline overlay component](image.png)
 
 - Blockers:
 	- Quest toolbar modal is blocked by completion of quest overlay, which will be done in the following week
+
+|![Questline overlay component](image.png)|
+|:--:|
+| *Component with buttons and functionality* |
 
 ## To-Do List
 ![Alt text](image-1.png)

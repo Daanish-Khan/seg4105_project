@@ -16,10 +16,12 @@ In attendance: Daniel, Daanish
 	- Base UI for overlay have been built
 		- No functionality
 	
-![Basic UI sketch](image.png)
-
 - Blockers:
 	- None at the moment
+
+|![Sketch](image.png)|
+|:--:|
+| *Basic UI Sketch* |
 
 ## To-Do List
 ![To-Do](image-1.png)

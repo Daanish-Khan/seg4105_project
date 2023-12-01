@@ -35,6 +35,10 @@ In attendance: Daniel, Daanish
 |:--:|
 | *Completed Modal with Styling + Functionality* |
 
+|![No Buttons](image-5.png)|
+|:--:|
+| *Quest overlay without buttons* |
+
 ## To-Do List
 ![To-Do List](image-3.png)
 
