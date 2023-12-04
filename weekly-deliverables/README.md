@@ -12,3 +12,4 @@
 |November 13|[link](nov13/README.md)|
 |November 20|[link](nov20/README.md)|
 |November 27|[link](nov27/README.md)|
+|December 4|[link](dec4/README.md)|
